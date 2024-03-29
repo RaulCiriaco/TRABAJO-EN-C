@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    float cantidad, descuento;
+
+    // Solicitar al usuario la cantidad de pesos
+    printf("Ingrese la cantidad de pesos: ");
+    scanf("%f", &cantidad);
+
+    // Solicitar al usuario si es cliente o no (1 para cliente, 0 para no cliente)
+    int esCliente;
+    printf("¿Es usted cliente? (Coloque 1 si es cliente o 0 si no es cliente): ");
+    scanf("%d", &esCliente);
+
+    // Calcular el descuento utilizando el operador ternario
+    descuento = esCliente ? cantidad * 0.2 : cantidad * 0.05;
+
+    // Calcular el total después del descuento
+    float total = cantidad - descuento;
+
+    // Imprimir el total con el descuento aplicado
+    printf("El total con descuento aplicado es: %.2f\n", total);
+
+    return 0;
+}
