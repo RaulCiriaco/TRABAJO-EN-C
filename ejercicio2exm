@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    float radio1, radio2, radio3;
+    float area1, area2, area3;
+    float pi = 3.1416;
+    
+    printf("Ingrese el Radio del Primer Circulo: ");
+    scanf("%f", &radio1);
+    printf("Ingrese el Radio del Segundo Circulo: ");
+    scanf("%f", &radio2);
+    printf("Ingrese el Radio del Tercer Circulo: ");
+    scanf("%f", &radio3);
+
+    area1 = pi * radio1 * radio1;
+    area2 = pi * radio2 * radio2;
+    area3 = pi * radio3 * radio3;
+
+    printf("\nEl area de el Primer circulo es: %f\n", area1);
+    printf("El area de el Segundo circulo es: %f\n", area2);
+    printf("El area de el Tercer circulo es: %f\n", area3);
+
+    return 0;
+}
