@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Función para recibir caracteres hasta que se ingresa un espacio o un salto de línea,
+// y luego mostrarlos en orden inverso
+void caracteresInversos() {
+    char caracteres[100]; // Arreglo para almacenar los caracteres
+    char caracter;
+    int i = 0;
+
+    printf("Ingrese caracteres (presione espacio o enter para terminar): ");
+
+    // Leer caracteres hasta encontrar un espacio o un salto de línea
+    while ((caracter = getchar()) != ' ' && caracter != '\n' && i < 100) {
+        caracteres[i] = caracter;
+        i++;
+    }
+
+    printf("Caracteres en orden inverso: ");
+
+    // Mostrar caracteres en orden inverso
+    for (int j = i - 1; j >= 0; j--) {
+        putchar(caracteres[j]);
+    }
+    printf("\n");
+}
+
+int main() {
+    caracteresInversos(); // Llamar a la función para recibir y mostrar caracteres en orden inverso
+    return 0;
+}
