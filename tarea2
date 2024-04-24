@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+// Función para encontrar el máximo entre dos números
+double maximo(double num1, double num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+int main() {
+    double numero1, numero2;
+
+    // Solicitar al usuario que ingrese dos números
+    printf("Ingrese el primer número: ");
+    scanf("%lf", &numero1);
+    printf("Ingrese el segundo número: ");
+    scanf("%lf", &numero2);
+
+    // Llamar a la función maximo y mostrar el resultado
+    double resultado = maximo(numero1, numero2);
+    printf("El máximo de %.2lf y %.2lf es: %.2lf\n", numero1, numero2, resultado);
+
+    return 0;
+}
