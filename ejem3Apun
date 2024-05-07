@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int num = 10;
+    int *p; // Declaración de un puntero a entero
+    int **pp; // Declaración de un puntero a puntero
+
+    p = &num; // Asignación de la dirección de num al puntero
+    pp = &p; // Asignación de la dirección de p al puntero a puntero
+
+    printf("Valor de num: %d\n", num);
+    printf("Dirección de num: %p\n", &num);
+    printf("Valor de p: %p\n", p); // Dirección de num
+    printf("Contenido de p: %d\n", *p); // Contenido de la dirección apuntada por p
+    printf("Valor de pp: %p\n", pp); // Dirección de p
+    printf("Contenido de pp: %p\n", *pp); // Contenido de la dirección apuntada por pp (p)
+    printf("Contenido del contenido de pp: %d\n", **pp); // Contenido de la dirección apuntada por pp (num)
+
+    return 0;
+}
