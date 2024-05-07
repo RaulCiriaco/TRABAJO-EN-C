@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char letra = 'A';
+    char *p; // Declaración de un puntero a carácter
+    p = &letra; // Asignación de la dirección de letra al puntero
+
+    printf("Valor de letra: %c\n", letra);
+    printf("Dirección de letra: %p\n", &letra);
+    printf("Valor de p: %p\n", p); // Dirección de letra
+    printf("Contenido de p: %c\n", *p); // Contenido de la dirección apuntada por p
+
+    return 0;
+}
