@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <time.h>
+
+void calcularEdad(int diaNac, int mesNac, int anoNac, int *ano, int *mes, int *dia) {
+    time_t t = time(NULL);
+    struct tm *tiempoActual = localtime(&t);
+
+    int diaActual = tiempoActual->tm_mday;
+    int mesActual = tiempoActual->tm_mon + 1; 
+    int anoActual = tiempoActual->tm_year + 1900; 
+
+    *ano = anoActual - anoNac;
+    *mes = mesActual - mesNac;
+    *dia = diaActual - diaNac;
+
+    if (*dia < 0) {
+        *mes -= 1;
+        *dia += 30;
+    }
+    if (*mes < 0) {
+        *ano -= 1;
+        *mes += 12;
+    }
+}
+
+int main() {
+    int ano, meses, dias;
+    int diaNacimiento;
+    int mesNacimiento;
+    int anoNacimiento;
+
+    printf("Ingresa tu fecha de nacimiento (dd/mm/aaaa): ");
+    scanf("%d/%d/%d", &diaNacimiento, &mesNacimiento, &anoNacimiento);
+
+    clock_t start = clock();
+    calcularEdad(diaNacimiento, mesNacimiento, anoNacimiento, &ano, &meses, &dias);
+    clock_t end = clock();
+    double tiempoEje = ((double)(end - start)) / CLOCKS_PER_SEC;
+
+    printf("Edad: %d años, %d meses, %d días\n", ano, meses, dias);
+    printf("Tiempo de ejecucion: %f segundos\n", tiempoEje);
+
+    return 0;
+}
