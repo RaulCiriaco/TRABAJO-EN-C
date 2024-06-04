@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void invertir(int* arr, int size) {
+    int* start = arr;
+    int* end = arr + size - 1;
+    while (start < end) {
+        int temp = *start;
+        *start = *end;
+        *end = temp;
+        ++start;
+        --end;
+    }
+}
+
+int main() {
+    const int SIZE = 5;
+    int arr[SIZE] = {1, 2, 3, 4, 5};
+
+    printf("Arreglo original:\n");
+    for (int i = 0; i < SIZE; ++i) {
+        printf("%d ", arr[i]);
+    }
+
+    invertir(arr, SIZE);
+
+    printf("\nArreglo invertido:\n");
+    for (int i = 0; i < SIZE; ++i) {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
