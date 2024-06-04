@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    const int SIZE = 10;
+    int arr[SIZE];
+    int* ptr = arr;
+
+    *ptr = 0;
+    *(ptr + 1) = 1;
+
+    for (int i = 2; i < SIZE; ++i) {
+        *(ptr + i) = *(ptr + i - 1) + *(ptr + i - 2);
+    }
+
+    ptr = arr; // Reiniciamos el puntero para imprimir
+    printf("Los primeros %d números de la secuencia de Fibonacci son:\n", SIZE);
+    for (int i = 0; i < SIZE; ++i) {
+        printf("%d ", *ptr);
+        ++ptr;
+    }
+
+    return 0;
+}
