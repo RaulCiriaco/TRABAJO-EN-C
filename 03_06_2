@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    const int SIZE = 5;
+    int arr[SIZE];
+    int* ptr = arr;
+
+    printf("Ingrese %d valores enteros:\n", SIZE);
+    for (int i = 0; i < SIZE; ++i) {
+        scanf("%d", ptr);
+        ++ptr;
+    }
+
+    ptr = arr; // Reiniciamos el puntero para imprimir
+    printf("Los valores ingresados son:\n");
+    for (int i = 0; i < SIZE; ++i) {
+        printf("%d ", *ptr);
+        ++ptr;
+    }
+
+    return 0;
+}
