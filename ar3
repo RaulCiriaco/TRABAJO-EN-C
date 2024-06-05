@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int num1 = 10, num2 = 20, num3 = 30;
+    int *apuntadores[3] = {&num1, &num2, &num3};
+    
+    for(int i = 0; i < 3; i++) {
+        printf("Valor al que apunta el apuntador %d: %d\n", i, *apuntadores[i]);
+    }
+    
+    return 0;
+}
