@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void imprimirArreglo(int *arr, int size) {
+    for(int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arreglo[5] = {1, 2, 3, 4, 5};
+    
+    imprimirArreglo(arreglo, 5);
+    
+    return 0;
+}
