@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    char *nombres[3] = {"Juan", "María", "Pedro"};
+    
+    for(int i = 0; i < 3; i++) {
+        printf("Nombre %d: %s\n", i, nombres[i]);
+    }
+    
+    return 0;
+}
