@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int arreglo[5] = {1, 2, 3, 4, 5};
+    
+    printf("Elemento en la posición 3: %d\n", arreglo[2]);
+    
+    return 0;
+}
