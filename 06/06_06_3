@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+void increment(int *p) {
+    (*p)++;  // Incrementa el valor apuntado por 'p'
+}
+
+int main() {
+    int a = 10;
+    printf("Antes de la función: %d\n", a);
+    increment(&a);
+    printf("Después de la función: %d\n", a);
+
+    return 0;
+}
